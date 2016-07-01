@@ -26,6 +26,7 @@ public class WebServer {
             // 클라이언트가 연결될때까지 대기한다.
             Socket connection;
             while ((connection = listenSocket.accept()) != null) {
+            	// 접속자 열 명이면 10개의 쓰레드가 열림
             	RequestHandler requestHandler = new RequestHandler(connection);
                 requestHandler.start();
             }
