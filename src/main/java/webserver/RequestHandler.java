@@ -55,8 +55,8 @@ public class RequestHandler extends Thread {
 			if(url.startsWith("/create")){
 				String requestBody = IOUtils.readData(br, Integer.parseInt(headers.get("Content-Length")));
 				log.debug("Request Body : {}", requestBody);
-				Map<String, String> params = HttpRequestUtils.parseQueryString(queryString);
-				User user = new User(params.get("userId"), params.get("password"),params.get("name"), params.get("email"));
+				//Map<String, String> params = HttpRequestUtils.parseQueryString(queryString);
+				//User user = new User(params.get("userId"), params.get("password"),params.get("name"), params.get("email"));
 				
 				
 				url = "/index.html";
